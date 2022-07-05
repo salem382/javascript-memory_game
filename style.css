@@ -1,0 +1,102 @@
+.info-box {
+    width: 50%;
+    margin: auto;
+    border: 2px solid #444;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    height: 50px;
+}
+.info-box h2 {
+    margin: 0;
+}
+.content {
+    width: 50%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective:1000px;
+}
+.content .box {
+    width:24%;
+    height: 170px;
+    position: relative;
+    margin: 3px;
+    
+   
+}
+.content .box .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #444;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    line-height: 150px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: all 1s;
+    z-index: 2;
+}
+.content .box .face {
+    transition: all 1s;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+.content .box img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .is-fliped > .back {
+    transform: rotateY(180deg);
+}
+.content .is-fliped > .face {
+    transform: rotateY(360deg);
+}
+.stop-click {
+    pointer-events: none;
+}
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-info {
+    text-align: center;
+    background-color: rgb(75, 171, 73);
+    width: 25%;
+    height: 200px;
+    font-size: 32px;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.start-info p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.start-info .play-btn {
+    padding: 4px 12px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    transition: all .3s;
+}
+.start-info .play-btn:hover {
+    background-color:#eeefcf;
+ }
